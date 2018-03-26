@@ -1,0 +1,35 @@
+<!--<div class="todoWrapper">
+  <button class="updateTodo" (click)="updateTodo()">Mark as complete {{todo.ID}} </button>{{todo.Message}} 
+  <button class="removeTodo" (click)="removeTodo()">remove {{todo.ID}} </button>
+</div>-->
+
+
+
+<!--<div class="container">
+
+  <button class=" btn btn-primary col-sm-3" (click)="updateTodo()">Mark as complete {{todo.ID}} </button> 
+  <input class="col-sm-3" type="text" value="{{todo.Message}}"/>
+    <button class=" btn btn-danger  col-sm-3" (click)="removeTodo()">remove {{todo.ID}} </button>
+</div>-->
+
+  <div class="table-responsive">  
+   <h3 style="color: red; ">Tasks to be completed</h3><p>(Click on Done to move the task to complete status)</p>      
+  <table border="1" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Todo Task</th>
+        <th>Priority</th>
+        <th>Done?</th>
+        <th>Remove Task</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{todo.Message}}</td>
+        <td>High</td>
+        <td (click)="updateTodo()"><input type="checkbox" [(ngModel)]="checked" /></td>
+        <td (click)="removeTodo()"><input type="checkbox"/></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

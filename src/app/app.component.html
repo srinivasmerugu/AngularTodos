@@ -1,0 +1,27 @@
+<!--<div class="App">
+  <div class="todo-wrapper">
+    <app-header></app-header>
+    <app-todo-input></app-todo-input>
+    <div *ngFor="let todo of todoService.getTodos()">
+      <app-todo-item [todo]="todo"></app-todo-item>
+    </div> 
+    <hr> 
+   <h2> Item Done </h2>  
+     <div *ngFor="let todo of todoService.getTodosDone()">
+      <b>   <div class="todones"> <app-todo-item [todo]="todo"></app-todo-item>  </div> </b>
+    </div> 
+  </div>
+</div>-->
+
+<div class="container">
+     <app-header></app-header>
+    <app-todo-input></app-todo-input>
+    <div *ngFor="let todo of todoService.getTodos(); let i = index">
+      <app-todo-item [todo]="todo" ></app-todo-item>
+    </div> 
+    <hr> 
+   <h2 style="color: green" > Completed Tasks </h2>  
+     <div *ngFor="let todo of todoService.getTodosDone()">
+      <b>   <div> <app-todo-done-item [todo]="todo"></app-todo-done-item>  </div> </b>
+    </div> 
+  </div>
