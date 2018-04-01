@@ -9,6 +9,10 @@ import { TodoInputComponent } from './components/todo-input/todo-input.component
 import { TodoService } from './services/todo.service';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { TodoDoneItemComponent } from './todo-done-item/todo-done-item.component';
+//import { LoginComponent } from './login/login.component';
+import { TodoComponent } from './todo/todo.component';
+import {RoutingModule} from './routing-module/routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,14 @@ import { TodoDoneItemComponent } from './todo-done-item/todo-done-item.component
     HeaderComponent,
     TodoInputComponent,
     TodoItemComponent,
-    TodoDoneItemComponent
+    TodoDoneItemComponent,
+   // LoginComponent,
+    TodoComponent,
+   LoginComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,RoutingModule
   ],
   providers: [
     TodoService

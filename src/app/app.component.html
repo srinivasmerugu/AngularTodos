@@ -13,15 +13,12 @@
   </div>
 </div>-->
 
-<div class="container">
-     <app-header></app-header>
-    <app-todo-input></app-todo-input>
-    <div *ngFor="let todo of todoService.getTodos(); let i = index">
-      <app-todo-item [todo]="todo" ></app-todo-item>
-    </div> 
-    <hr> 
-   <h2 style="color: green" > Completed Tasks </h2>  
-     <div *ngFor="let todo of todoService.getTodosDone()">
-      <b>   <div> <app-todo-done-item [todo]="todo"></app-todo-done-item>  </div> </b>
-    </div> 
+
+  <!--<div class="container">
+  <div class="row">
+  <button (click)="login()">login</button>
+  
+    
   </div>
+</div>-->
+  <router-outlet></router-outlet>

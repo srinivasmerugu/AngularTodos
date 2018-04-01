@@ -1,0 +1,26 @@
+<div class="container">
+ <form novalidate #f=ngForm> 
+ 
+  <div class="row">
+      <div class=" col-sm-12 form-group" style="align:center;padding:25px">
+          <input  id="email" 
+              type="email" class="form-control validate" [(ngModel)]="email" name="email" ngModel  required>
+          <label for="email">Email</label>
+      </div>
+  </div>
+  <div class="row">
+      <div class="input-field" style="align:center;padding:25px">
+          <input id="password" 
+              type="password" class="form-control" [(ngModel)]="password" name="password" ngModel required>
+          <label for="password">Password</label>
+      </div>
+  </div>
+  <div class="row">
+      <button class="btn btn-success " style="align:center;" (click)="login()">login</button>
+  </div>
+
+  
+</form>
+  
+    
+  </div>
